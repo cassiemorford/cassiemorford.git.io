@@ -5,7 +5,6 @@ module.exports = withSass({
     exportPathMap: function() {
         return {
         '/': { page: '/' },
-        '/about': { page: '/about' },
         '/pokemon': {page: '/pokemon'}
         };
     }

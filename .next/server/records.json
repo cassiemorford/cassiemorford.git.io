@@ -1,30 +1,47 @@
 {
   "modules": {
     "byIdentifier": {
-      "multi private-next-pages/about.js": 0,
-      "multi private-next-pages/index.js": 1,
-      "multi private-next-pages/pokemon.tsx": 2,
-      "multi next/dist/pages/_app": 3,
-      "multi next/dist/pages/_error": 4,
-      "multi next/dist/pages/_document": 5
+      "multi private-next-pages/index.js": 0,
+      "multi private-next-pages/pokemon.tsx": 1,
+      "multi next/dist/pages/_app": 2,
+      "multi next/dist/pages/_error": 3,
+      "multi next/dist/pages/_document": 4
     },
     "usedIds": {
       "0": 0,
       "1": 1,
       "2": 2,
       "3": 3,
-      "4": 4,
-      "5": 5
+      "4": 4
     }
   },
   "chunks": {
     "byName": {
-      "static/3U0lfuvbfchco-jWJMu0b/pages/_app.js": 0,
-      "static/3U0lfuvbfchco-jWJMu0b/pages/_document.js": 1,
-      "static/3U0lfuvbfchco-jWJMu0b/pages/_error.js": 2,
-      "static/3U0lfuvbfchco-jWJMu0b/pages/about.js": 3,
-      "static/3U0lfuvbfchco-jWJMu0b/pages/index.js": 4,
-      "static/3U0lfuvbfchco-jWJMu0b/pages/pokemon.js": 5
+      "static/4QbCb9GSlONxSEcZYboXQ/pages/_app.js": 0,
+      "static/4QbCb9GSlONxSEcZYboXQ/pages/_document.js": 1,
+      "static/4QbCb9GSlONxSEcZYboXQ/pages/_error.js": 2,
+      "static/4QbCb9GSlONxSEcZYboXQ/pages/index.js": 3,
+      "static/4QbCb9GSlONxSEcZYboXQ/pages/pokemon.js": 4,
+      "static/FnyfMoPH9q3JMWziz3uFa/pages/_app.js": 5,
+      "static/FnyfMoPH9q3JMWziz3uFa/pages/_document.js": 6,
+      "static/FnyfMoPH9q3JMWziz3uFa/pages/_error.js": 7,
+      "static/FnyfMoPH9q3JMWziz3uFa/pages/index.js": 8,
+      "static/FnyfMoPH9q3JMWziz3uFa/pages/pokemon.js": 9,
+      "static/iIP6eLsoMwJ-D87iHS9Xv/pages/_app.js": 0,
+      "static/iIP6eLsoMwJ-D87iHS9Xv/pages/_document.js": 1,
+      "static/iIP6eLsoMwJ-D87iHS9Xv/pages/_error.js": 2,
+      "static/iIP6eLsoMwJ-D87iHS9Xv/pages/index.js": 3,
+      "static/iIP6eLsoMwJ-D87iHS9Xv/pages/pokemon.js": 4,
+      "static/dit_Me-h1t8ANPoAyFa62/pages/_app.js": 5,
+      "static/dit_Me-h1t8ANPoAyFa62/pages/_document.js": 6,
+      "static/dit_Me-h1t8ANPoAyFa62/pages/_error.js": 7,
+      "static/dit_Me-h1t8ANPoAyFa62/pages/index.js": 8,
+      "static/dit_Me-h1t8ANPoAyFa62/pages/pokemon.js": 9,
+      "static/5-P3P4lM6MDU_6Uh5nNHj/pages/_app.js": 0,
+      "static/5-P3P4lM6MDU_6Uh5nNHj/pages/_document.js": 1,
+      "static/5-P3P4lM6MDU_6Uh5nNHj/pages/_error.js": 2,
+      "static/5-P3P4lM6MDU_6Uh5nNHj/pages/index.js": 3,
+      "static/5-P3P4lM6MDU_6Uh5nNHj/pages/pokemon.js": 4
     },
     "bySource": {},
     "usedIds": [
@@ -32,8 +49,7 @@
       1,
       2,
       3,
-      4,
-      5
+      4
     ]
   }
 }

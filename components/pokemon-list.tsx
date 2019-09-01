@@ -2,7 +2,6 @@ import React from "react";
 import "isomorphic-fetch";
 import Fonts from './Fonts';
 
-import StatCard from './stat-card';
 import "../scss/main.scss";
 
 

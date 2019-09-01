@@ -349,14 +349,14 @@ class PokemonList extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
       className: "pokemon-list",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 56
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "pokemon-list__counter",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 57
       },
       __self: this
     }, data.length, " pokemon loaded"), data.map(pokemon => {
@@ -367,14 +367,14 @@ class PokemonList extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
         href: `/pokemon?pokemon=${pokemon.name}`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 64
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "pokemon-mini__name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 65
         },
         __self: this
       }, pokemon.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -382,7 +382,7 @@ class PokemonList extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
         src: pokemon.sprites && pokemon.sprites.front_default,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 66
         },
         __self: this
       }));
