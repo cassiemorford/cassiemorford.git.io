@@ -1,0 +1,42 @@
+.stat-card {
+    width: 80%;
+    margin: auto;
+    background-color: lavender;
+    color: $secondary-color-light;
+    border-radius: 1rem;
+    box-shadow: 0 1px 4px $secondary-color-dark;
+    padding: 1rem;
+
+    &__name-area {
+        color: $secondary-color-dark;
+        width: 20%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: .5rem 0 .5rem .5rem;
+    }
+
+    &__bar-area {
+        height: 4rem;
+        width: 80%;
+        border-left: 1px solid $secondary-color-dark;
+        padding: .5rem 0;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        height: 4rem;
+    }
+
+    &__stat-bar {
+        width: 80%;
+        height: 2rem;
+        background-color: $secondary-color-dark;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 4px;
+    }
+}

@@ -1,0 +1,48 @@
+.pokemon {
+    background-color: $primary-color;
+    height: 100%;
+    color: white;
+
+    &__content {
+        margin: 0 auto;
+        height: inherit;
+        max-width: 1200px;
+        padding: 0 10%;
+        background-image: linear-gradient(
+            to right, 
+            $primary-color 0%,
+            $primary-color-dark 10%,
+            $primary-color 50%,
+            $primary-color-dark 90%,
+            $primary-color 100%
+        );
+    }
+
+    &__header {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__name {
+        text-align: center;
+        margin: 1.5rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        background-image: linear-gradient(20deg, grey, rgb(59, 27, 52));        
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &__type {
+        list-style: none;
+        display: inline-block;
+        margin: 0 1rem;
+    }
+
+    &__image {
+        width: 150px;
+    }
+}
+

@@ -1,0 +1,103 @@
+  
+  .pokemon-list {
+      &__counter {
+          position: fixed;
+          z-index: 1;
+          top: 1em;
+          right: 1rem;
+          background-color: white;
+          height: 4rem;
+          border-radius: 1rem;
+          width: 16rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+  }
+  
+  .pokemon-mini {
+    box-shadow: 0px 1px 4px grey;
+    min-height: 20px;
+    display: inline-block;
+    width: 130px;
+    height: 160px;
+    margin: 8px;
+    background-color: rgba(white, .5);
+    text-decoration: none;
+
+    &__name {
+        color: white;
+    }
+    
+    &__image {
+      width: 100px;
+      max-height: 100px;
+      position: relative;
+    }
+    
+    & > * {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+        
+    &--poison {
+      background-color: rgba(green, .2);
+    }
+    &--fire {
+      background-color: rgba(red, .2);
+    }
+    &--flying {
+      background-color: rgba(skyblue, .2);
+    }
+    &--water {
+      background-color: rgba(blue, .2); 
+    }
+    &--bug {
+      background-color: rgba(yellowgreen, .2);
+    }
+    &--normal {
+      background-color: rgba(grey, .2);
+    }
+    &--electric {
+        background-color: rgba(yellow, .2);
+    }
+    &--ground {
+        background-color: rgba(brown, .2);
+    }
+    &--fairy {
+        background-color: rgba(pink, .2);
+    }
+    &--grass {
+        background-color: rgba(darkgreen, .2);
+    }
+    &--fighting {
+        background-color: rgba(orange, .2);
+    }
+    &--psychic {
+        background-color: rgba(purple, .2);
+    }
+    &--steel {
+        background-color: rgba(silver, .2);  
+    }
+    &--ice {
+      background-color: rgba(lightblue, .2);  
+    }
+    &--rock {
+      background-color: rgba(grey, .2);  
+    }
+    &--dragon {
+      background-color: rgba(green, .2);  
+    }
+    &--dark {
+      background-color: rgba(black, .2);  
+    }
+    &--ghost {
+      background-color: rgba(silver, .2);  
+    }
+  }
+  

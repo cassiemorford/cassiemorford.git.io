@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto', serif;
+}
+
+.name-header {
+    background-image: linear-gradient(to right, skyblue, rgb(117, 139, 182));
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 20px;
+
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
