@@ -1,0 +1,52 @@
+{
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/sass-loader/lib/loader.js??ref--5-2!scss/main.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/sass-loader/lib/loader.js??ref--5-2!scss/main.scss 0": 0
+    },
+    "usedIds": {
+      "0": 0
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "styles": 2,
+      "static/AI9JukOCUrwfOVTlTCebb/pages/_app.js": 3,
+      "static/AI9JukOCUrwfOVTlTCebb/pages/_error.js": 4,
+      "static/AI9JukOCUrwfOVTlTCebb/pages/about.js": 5,
+      "static/AI9JukOCUrwfOVTlTCebb/pages/index.js": 6,
+      "static/AI9JukOCUrwfOVTlTCebb/pages/pokemon.js": 7,
+      "static/runtime/main.js": 8
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+}
