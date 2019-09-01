@@ -39,20 +39,21 @@ class PokemonInfo extends React.Component<PokemonProps, PokemonState> {
       <div className="pokemon">
         {loading && <div className="loader" />}
         {!loading && (
+          <div>
+          <div className="pokemon__header"> 
+            <img
+              className="pokemon__image"
+              src={data.sprites && data.sprites.back_default}
+              alt={data.name}
+            />
+            <h3 className="pokemon__name">{data.name}</h3>
+            <img
+              className="pokemon__image"
+              src={data.sprites && data.sprites.front_default}
+              alt={data.name}
+            />
+          </div>
           <div className="pokemon__content">
-            <div className="pokemon__header">
-              <img
-                className="pokemon__image"
-                src={data.sprites && data.sprites.back_default}
-                alt={data.name}
-              />
-              <h3 className="pokemon__name">{data.name}</h3>
-              <img
-                className="pokemon__image"
-                src={data.sprites && data.sprites.front_default}
-                alt={data.name}
-              />
-            </div>
             <div className="pokemon__left">
               <h3 className="pokemon__type-list-header"> types </h3>
               <ul className="pokemon__type-list">
@@ -65,6 +66,7 @@ class PokemonInfo extends React.Component<PokemonProps, PokemonState> {
             <div className="pokemon__right">
                   <StatCard stats={data.stats}/>
             </div>
+          </div>
           </div>
         )}
       </div>

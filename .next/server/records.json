@@ -19,12 +19,12 @@
   },
   "chunks": {
     "byName": {
-      "static/AI9JukOCUrwfOVTlTCebb/pages/_app.js": 0,
-      "static/AI9JukOCUrwfOVTlTCebb/pages/_document.js": 1,
-      "static/AI9JukOCUrwfOVTlTCebb/pages/_error.js": 2,
-      "static/AI9JukOCUrwfOVTlTCebb/pages/about.js": 3,
-      "static/AI9JukOCUrwfOVTlTCebb/pages/index.js": 4,
-      "static/AI9JukOCUrwfOVTlTCebb/pages/pokemon.js": 5
+      "static/3U0lfuvbfchco-jWJMu0b/pages/_app.js": 0,
+      "static/3U0lfuvbfchco-jWJMu0b/pages/_document.js": 1,
+      "static/3U0lfuvbfchco-jWJMu0b/pages/_error.js": 2,
+      "static/3U0lfuvbfchco-jWJMu0b/pages/about.js": 3,
+      "static/3U0lfuvbfchco-jWJMu0b/pages/index.js": 4,
+      "static/3U0lfuvbfchco-jWJMu0b/pages/pokemon.js": 5
     },
     "bySource": {},
     "usedIds": [

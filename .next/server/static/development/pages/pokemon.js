@@ -183,7 +183,6 @@ class PokemonInfo extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
       },
       __self: this
     }), !loading && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "pokemon__content",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 42
@@ -222,55 +221,62 @@ class PokemonInfo extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "pokemon__left",
+      className: "pokemon__content",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 56
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "pokemon__left",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
       className: "pokemon__type-list-header",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 58
       },
       __self: this
     }, " types "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
       className: "pokemon__type-list",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 59
       },
       __self: this
     }, data.types.map(t => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: "pokemon__type",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
       },
       __self: this
     }, t.type.name))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "pokemon__weight",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 64
       },
       __self: this
     }, " weight: ", data.weight)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "pokemon__right",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 66
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_stat_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
       stats: data.stats,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 67
       },
       __self: this
-    }))));
+    })))));
   }
 
 }

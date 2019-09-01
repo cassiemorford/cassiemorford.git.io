@@ -1,22 +1,8 @@
 .pokemon {
-    background-color: $primary-color;
     height: 100%;
-    color: white;
-
-    &__content {
-        margin: 0 auto;
-        height: inherit;
-        max-width: 1200px;
-        padding: 0 10%;
-        background-image: linear-gradient(
-            to right, 
-            $primary-color 0%,
-            $primary-color-dark 10%,
-            $primary-color 50%,
-            $primary-color-dark 90%,
-            $primary-color 100%
-        );
-    }
+    color: $quaternary-color;
+    display: flex;
+    flex-direction: column;
 
     &__header {
         display: flex; 
@@ -24,15 +10,34 @@
         justify-content: center;
     }
 
+    &__content {
+        margin: 0 auto;
+        height: inherit;
+        max-width: 1200px;
+        padding: 0 10%;
+        display: flex;
+    }
+
     &__name {
         text-align: center;
         margin: 1.5rem;
-        font-size: 3rem;
+        font-size: 5rem;
         text-transform: uppercase;
-        background-image: linear-gradient(20deg, grey, rgb(59, 27, 52));        
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+        background-color:$quaternary-color;
+        background-image:
+        radial-gradient(circle at 100% 150%, $quaternary-color 24%, $quaternary-color-light 25%, $quaternary-color-light 28%, $quaternary-color 29%, $quaternary-color 36%, $quaternary-color-light 36%, $quaternary-color-light 40%, transparent 40%, transparent),
+        radial-gradient(circle at 0    150%, $quaternary-color 24%, $quaternary-color-light 25%, $quaternary-color-light 28%, $quaternary-color 29%, $quaternary-color 36%, $quaternary-color-light 36%, $quaternary-color-light 40%, transparent 40%, transparent),
+        radial-gradient(circle at 50%  100%, $quaternary-color-light 10%, $quaternary-color 11%, $quaternary-color 23%, $quaternary-color-light 24%, $quaternary-color-light 30%, $quaternary-color 31%, $quaternary-color 43%, $quaternary-color-light 44%, $quaternary-color-light 50%, $quaternary-color 51%, $quaternary-color 63%, $quaternary-color-light 64%, $quaternary-color-light 71%, transparent 71%, transparent),
+        radial-gradient(circle at 100% 50%, $quaternary-color-light 5%, $quaternary-color 6%, $quaternary-color 15%, $quaternary-color-light 16%, $quaternary-color-light 20%, $quaternary-color 21%, $quaternary-color 30%, $quaternary-color-light 31%, $quaternary-color-light 35%, $quaternary-color 36%, $quaternary-color 45%, $quaternary-color-light 46%, $quaternary-color-light 49%, transparent 50%, transparent),
+        radial-gradient(circle at 0    50%, $quaternary-color-light 5%, $quaternary-color 6%, $quaternary-color 15%, $quaternary-color-light 16%, $quaternary-color-light 20%, $quaternary-color 21%, $quaternary-color 30%, $quaternary-color-light 31%, $quaternary-color-light 35%, $quaternary-color 36%, $quaternary-color 45%, $quaternary-color-light 46%, $quaternary-color-light 49%, transparent 50%, transparent);
+        background-size: 50px 50px;
+    }
+
+    &__right {
+        flex: 1;
     }
 
     &__type {

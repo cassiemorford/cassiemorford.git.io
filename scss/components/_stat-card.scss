@@ -1,7 +1,7 @@
 .stat-card {
     width: 80%;
     margin: auto;
-    background-color: lavender;
+    background-color: rgba($tertiary-color-light, .2);
     color: $secondary-color-light;
     border-radius: 1rem;
     box-shadow: 0 1px 4px $secondary-color-dark;
@@ -20,6 +20,7 @@
         height: 4rem;
         width: 80%;
         border-left: 1px solid $secondary-color-dark;
+        border-right: 1px solid $secondary-color-light;
         padding: .5rem 0;
     }
 
@@ -33,6 +34,7 @@
     &__stat-bar {
         width: 80%;
         height: 2rem;
+        color: $primary-color;
         background-color: $secondary-color-dark;
         display: flex;
         align-items: center;
