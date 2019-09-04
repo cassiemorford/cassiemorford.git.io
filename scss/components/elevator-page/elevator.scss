@@ -1,0 +1,62 @@
+.elevator {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+    color: white;
+    height: 100px;
+    position: absolute;
+    padding: 6px;
+    transition: all .3s;
+
+    &__shaft {
+        height: 100%;
+        width: 100px;
+        border: 1px solid black;
+        background: repeating-linear-gradient(white, transparent 100px);
+        position: relative;
+        margin: 0 20px;
+    }
+
+    &__directions {
+        display: flex;
+        align-items: center;
+
+        &--UP {
+            .elevator__direction--up {
+                color: green;
+            }
+            .elevator__direction--down {
+                opacity: .2;
+            }
+        }
+
+        &--DOWN {
+            .elevator__direction--down {
+                color: red;
+            }
+            .elevator__direction--up {
+                opacity: .2;
+            }
+        }
+    }
+
+    &__riders {
+        background: rgba(white, .3);
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-flow: wrap;
+    }
+
+    &__rider {
+        background: darkcyan;
+        border-radius: 20px;
+        padding: 5px;
+        color: white;
+        transition: all .3s;
+    }
+}

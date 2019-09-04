@@ -1,35 +1,34 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_9e2a3f9838424feeb96c.js",
+    "static/development/dll/dll_9e2a3f9838424feeb96c.js.map"
+  ],
   "pages": {
     "/": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/css/commons.70fc3a97.chunk.css",
-      "static/chunks/commons.f13f9468a609c4c053ca.js",
-      "static/runtime/main-b1566f424edc58353622.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ],
     "/_app": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/css/commons.70fc3a97.chunk.css",
-      "static/chunks/commons.f13f9468a609c4c053ca.js",
-      "static/runtime/main-b1566f424edc58353622.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/css/commons.70fc3a97.chunk.css",
-      "static/chunks/commons.f13f9468a609c4c053ca.js",
-      "static/runtime/main-b1566f424edc58353622.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/elevators": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ],
     "/index": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/css/commons.70fc3a97.chunk.css",
-      "static/chunks/commons.f13f9468a609c4c053ca.js",
-      "static/runtime/main-b1566f424edc58353622.js"
-    ],
-    "/pokemon": [
-      "static/runtime/webpack-f5e50b6b501ccea2a79b.js",
-      "static/css/commons.70fc3a97.chunk.css",
-      "static/chunks/commons.f13f9468a609c4c053ca.js",
-      "static/runtime/main-b1566f424edc58353622.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ]
   }
 }

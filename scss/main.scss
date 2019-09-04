@@ -5,7 +5,10 @@
 @import 'base/typography';
 @import 'base/utilities';
 
-@import 'components/pokemon';
-@import 'components/pokemon-list';
+@import 'components/pokemon-page/pokemon';
+@import 'components/pokemon-page/pokemon-list';
 @import 'components/loader';
-@import 'components/stat-card';
+@import 'components/pokemon-page/stat-card';
+@import 'components/elevator-page/elevator-system';
+@import 'components/elevator-page/elevator';
+@import 'components/calculator';

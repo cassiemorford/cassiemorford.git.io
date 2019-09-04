@@ -1,8 +1,8 @@
 import React from "react";
 import "isomorphic-fetch";
 import Fonts from '../components/Fonts';
-import PokemonInfo from '../components/pokemon-info'
-import PokemonList from '../components/pokemon-list'
+import PokemonInfo from '../components/pokemon-page/pokemon-info'
+import PokemonList from '../components/pokemon-page/pokemon-list'
 
 import "../scss/main.scss";
 
