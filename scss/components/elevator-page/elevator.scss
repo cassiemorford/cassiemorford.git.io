@@ -58,5 +58,9 @@
         padding: 5px;
         color: white;
         transition: all .3s;
+
+        &--done {
+            background-color: pink;
+        }
     }
 }

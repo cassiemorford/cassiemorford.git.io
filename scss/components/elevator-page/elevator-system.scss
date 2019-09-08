@@ -1,14 +1,20 @@
-button {
-    height: 60px;
-    font-size: 2rem;
-    background-image: linear-gradient(45deg, white, transparent);
-}
 
 .elevator-system {
     height: 90vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    
+    &__buttons {
+        position: fixed;
+        top: 1rem;
+        left: 2rem;
+        button {
+            height: 60px;
+            font-size: 2rem;
+            background-image: linear-gradient(45deg, white, transparent);
+        }
+    }
 
     &__graphic {
         font-family: sans-serif;
@@ -34,6 +40,7 @@ button {
     &__floor {
         height: 100px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: flex-end;
         position: relative;

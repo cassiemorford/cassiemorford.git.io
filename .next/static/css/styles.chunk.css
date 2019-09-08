@@ -229,16 +229,19 @@ body {
     justify-content: flex-end;
     padding-right: 4px; }
 
-button {
-  height: 60px;
-  font-size: 2rem;
-  background-image: linear-gradient(45deg, white, transparent); }
-
 .elevator-system {
   height: 90vh;
   display: flex;
   flex-direction: column;
   padding: 20px; }
+  .elevator-system__buttons {
+    position: fixed;
+    top: 1rem;
+    left: 2rem; }
+    .elevator-system__buttons button {
+      height: 60px;
+      font-size: 2rem;
+      background-image: linear-gradient(45deg, white, transparent); }
   .elevator-system__graphic {
     font-family: sans-serif;
     font-size: .8rem;
@@ -257,6 +260,7 @@ button {
   .elevator-system__floor {
     height: 100px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
     position: relative; }
@@ -308,6 +312,8 @@ button {
     padding: 5px;
     color: white;
     transition: all .3s; }
+    .elevator__rider--done {
+      background-color: pink; }
 
 .calculator {
   margin: 20px auto;

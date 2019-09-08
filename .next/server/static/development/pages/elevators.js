@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -119,12 +119,28 @@ class ElevatorSystem extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Compon
   constructor(props) {
     super(props);
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "addUsersHandler", () => {
+      this.setState({
+        users: [...this.state.users, ...this.createNewUsers(5)]
+      });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "userCleanup", () => {
+      const {
+        users
+      } = this.state;
+      return users.filter(u => u.destination !== u.onFloor);
+    });
+
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(this, "elevatorStep", () => {
       let {
         elevators,
-        users,
-        totalFloors
+        users
       } = this.state;
+      const {
+        totalFloors
+      } = this.props;
+      users = this.userCleanup();
       elevators.forEach(el => {
         // MOVEMENT
         // if at top or bottom, turn around
@@ -134,9 +150,18 @@ class ElevatorSystem extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Compon
 
         if (el.floor === 1) {
           el.direction = _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Up;
-        } // USERS
-        // let off users
+        } // let on users
 
+
+        users.forEach(u => {
+          if (u.onFloor === el.floor && el.direction === u.direction) {
+            // let riders on
+            u.onFloor = null;
+            u.inElevator = el.el_id;
+          }
+        }); // take next step
+
+        el.floor = el.direction === _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Up ? el.floor + 1 : el.floor - 1; // let off users
 
         users.forEach(u => {
           if (u.inElevator === el.el_id && el.floor === u.destination) {
@@ -144,14 +169,8 @@ class ElevatorSystem extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Compon
             u.inElevator = null;
             u.onFloor = u.destination;
             u.direction = null;
-          } else if (u.onFloor === el.floor && el.direction === u.direction) {
-            // let riders on
-            u.onFloor = null;
-            u.inElevator = el.el_id;
           }
-        }); // take next step
-
-        el.floor = el.direction === _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Up ? el.floor + 1 : el.floor - 1;
+        });
       });
       this.setState({
         elevators,
@@ -166,47 +185,44 @@ class ElevatorSystem extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Compon
         stops: [],
         el_id: 'A'
       }, {
-        floor: 5,
+        floor: props.totalFloors,
         direction: _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Down,
         stops: [],
         el_id: 'B'
       }],
-      users: [{
-        origin: 2,
-        onFloor: 2,
-        destination: 3,
-        direction: _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Up
-      }, {
-        origin: 1,
-        onFloor: 1,
-        destination: 3,
-        direction: _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Up
-      }, {
-        origin: 4,
-        onFloor: 4,
-        destination: 2,
-        direction: _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Down
-      }, {
-        origin: 2,
-        onFloor: 2,
-        destination: 5,
-        direction: _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Up
-      }, {
-        origin: 4,
-        onFloor: 4,
-        destination: 5,
-        direction: _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Up
-      }],
-      totalFloors: 5
+      users: this.createNewUsers(10)
     };
+  }
+
+  createNewUsers(n) {
+    const {
+      totalFloors
+    } = this.props;
+    let newUsers = [];
+
+    for (let i = 0; i < n; i++) {
+      const origin = Math.floor(Math.random() * totalFloors) + 1;
+      const destination = Math.floor(Math.random() * totalFloors) + 1;
+      const newUser = {
+        origin,
+        onFloor: origin,
+        destination,
+        direction: destination - origin > 0 ? _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Up : _elevator_page_elevator_types__WEBPACK_IMPORTED_MODULE_4__["ElevatorDirection"].Down
+      };
+      newUsers.push(newUser);
+    }
+
+    return newUsers;
   }
 
   render() {
     const {
       elevators,
-      users,
-      totalFloors
+      users
     } = this.state;
+    const {
+      totalFloors
+    } = this.props;
     const elevatorShaftStyles = {
       height: `${100 * totalFloors}px`
     };
@@ -217,28 +233,42 @@ class ElevatorSystem extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Compon
       className: "elevator-system",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 124
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "elevator-system__buttons",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 125
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
       onClick: this.elevatorStep,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 126
       },
       __self: this
-    }, "Run Elevator"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    }, "Run Elevator"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      onClick: this.addUsersHandler,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 127
+      },
+      __self: this
+    }, "Add Riders")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       className: "elevator-system__graphic",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 129
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       className: "elevator-system__elevators",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 130
       },
       __self: this
     }, elevators.map(el => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -247,21 +277,21 @@ class ElevatorSystem extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Compon
       style: elevatorShaftStyles,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 132
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_elevator_page_elevator__WEBPACK_IMPORTED_MODULE_3__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, el, {
       el_id: el.el_id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 133
       },
       __self: this
     }), peopleInElevators.filter(p => p.inElevator === el.el_id).map(p => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       className: "elevator__rider",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 137
       },
       __self: this
     }, `${p.origin}\u21e2${p.destination}`)))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -269,28 +299,28 @@ class ElevatorSystem extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Compon
       style: elevatorShaftStyles,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122
+        lineNumber: 144
       },
       __self: this
     }, floors.map((floor, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       className: "elevator-system__floor",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 124
+        lineNumber: 146
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       className: "elevator-system__floor-number",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 147
       },
       __self: this
     }, floor), peopleWaiting.filter(p => p.onFloor === floor).map(p => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-      className: "elevator__rider",
+      className: `elevator__rider ${p.onFloor === p.destination ? 'elevator__rider--done' : ''}`,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 151
       },
       __self: this
     }, `${p.origin}\u21e2${p.destination}`)))))));
@@ -512,6 +542,7 @@ var _jsxFileName = "/Users/cassiemorford/Desktop/cassieM/pages/elevators.tsx";
 class Elevator extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   render() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_elevator_page_elevator_system__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      totalFloors: 5,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 9
@@ -537,7 +568,7 @@ class Elevator extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!***********************************!*\
   !*** multi ./pages/elevators.tsx ***!
   \***********************************/

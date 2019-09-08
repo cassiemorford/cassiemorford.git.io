@@ -6,7 +6,7 @@ import "../scss/main.scss";
 class Elevator extends React.Component {
   render() {
     return (
-      <ElevatorSystem/>
+      <ElevatorSystem totalFloors={5}/>
     );
   }
 }
